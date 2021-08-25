@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DublinbikeComponent } from './components/dublinbike/dublinbike.component';
 import { StationDetailComponent } from './components/station-detail/station-detail.component';
-
+import {FormsModule} from '@angular/forms';
+import { FilterstationsPipe } from './pipes/filterstations.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     DublinbikeComponent,
-    StationDetailComponent
+    StationDetailComponent,
+    FilterstationsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

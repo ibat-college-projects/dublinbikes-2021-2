@@ -1,1 +1,27 @@
-<p>dublinbike works!</p>
+<p>You are searching for {{searchText}}</p>
+<input type="text" placeholder="filter" [(ngModel)]="searchText" />
+<table class="table">
+    <tr *ngFor="let dublinBikeStation of dublinBikeStations | filterstations: searchText">
+        <td>{{dublinBikeStation.number}}</td>
+<td> {{dublinBikeStation.contractName}}</td>
+<td>{{dublinBikeStation.name}}</td>
+
+<td>{{dublinBikeStation.address}}</td>
+<td>{{dublinBikeStation.position.lat}}</td>
+<td>{{dublinBikeStation.position.lng}}</td>
+<td><a routerLink="/station/{{dublinBikeStation.number}}">Load Station</a></td>
+
+
+
+
+
+
+
+       
+
+
+
+
+
+    </tr>
+</table>

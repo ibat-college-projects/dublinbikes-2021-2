@@ -1,1 +1,14 @@
 <p>station-detail works!</p>
+
+
+
+<table class="table" *ngIf="dublinBikeStation">
+    <tr>
+        <td>{{dublinBikeStation.number}}</td>
+<td> {{dublinBikeStation.contractName}}</td>
+<td>{{dublinBikeStation.name}}</td>
+
+<td>{{dublinBikeStation.address}}</td>
+<td>{{dublinBikeStation.position.lat}}</td>
+<td>{{dublinBikeStation.position.lng}}</td>
+    </tr></table>

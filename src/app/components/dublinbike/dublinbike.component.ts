@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Dublinbike } from 'src/app/models/dublinbike';
 import { DublinbikeService } from 'src/app/services/dublinbike.service';
 
 @Component({
@@ -14,13 +15,17 @@ export class DublinbikeComponent implements OnInit {
     this.getStations();
   }
 
-  dublinBikeStations: any[]=[];
+  dublinBikeStations: Dublinbike[]=[];
+  searchText : string | any;
   getStations() {
 
     this.dublinBikeService.getStations().subscribe(listOfStations => {
 
       console.log(listOfStations);
-    })git 
+      this.dublinBikeStations = listOfStations;
+
+
+    })
 
   }
 
